@@ -31,7 +31,10 @@ cartToPolar (x,y,z) = sqrt (sq x + sq y + sq z)
     sq n = pow n 2
 
 gravitationalForce : (Float,Float,Float) -> Float -> Float
-gravitationalForce v m = (gravitationG * m * massOfEarth) / (pow r 2)
+gravitationalForce v m =
+  (gravitationG * m * massOfEarth)
+  /
+  (pow r 2)
   where
     r = cartToPolar v
 
